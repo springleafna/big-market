@@ -1,0 +1,12 @@
+24-12-09.12:57:58.456 [main            ] INFO  Application            - Starting Application using Java 1.8.0_362 on spring with PID 24376 (D:\javatools\IDEAtool\javaproject\Big-Market\Big-Market-app\target\classes started by 86167 in D:\javatools\IDEAtool\javaproject\Big-Market)
+24-12-09.12:57:58.459 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-12-09.12:57:59.017 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.springleaf]' package. Please check your configuration.
+24-12-09.12:57:59.380 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-12-09.12:57:59.394 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-12-09.12:57:59.395 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-12-09.12:57:59.395 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-12-09.12:57:59.567 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-12-09.12:57:59.567 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1071 ms
+24-12-09.12:58:00.087 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-12-09.12:58:00.182 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-12-09.12:58:00.190 [main            ] INFO  Application            - Started Application in 2.195 seconds (JVM running for 3.879)
