@@ -1,5 +1,5 @@
 # 大营销
-1.首先将抽奖的策略初始化
+1. 首先将抽奖的策略初始化
 创建一个Map集合，key为抽奖生成的随机数，value为奖品Id
 每种奖品都有对应的概率（和为1？暂时为1）
 假设概率分布为：
@@ -18,7 +18,7 @@
 则这10000个key中有一个位置存放的是概率为0.0001的奖品Id，有99个位置存放的是概率为0.0099的奖品Id，以此类推
 这样随机生成一个0-9999的随机数，然后根据这个随机数在Map集合中查找奖品Id，即可得到奖品
 
-2.rule_weight规则的策略
+2. rule_weight规则的策略
 根据策略Id获取到该策略实体，然后判断该策略的rule_model中是否有rule_weight规则，
 如果无则结束
 如果有，则在strategy_rule表中查找对应rule_weight规则
@@ -27,3 +27,16 @@
 然后将这个规则转换为Map集合：Map<Integer, List<Integer>>，key为积分达标要求，value为奖品Id列表
 然后在第一步中的Map集合中去除其他没达到中奖范围的奖品Id，得到最终的奖品IdMap集合
 这样随机生成一个在该Map范围内的随机数，然后根据这个随机数在Map集合中根据key去取value即对应的奖品Id
+
+### 抽奖规则过滤：
+
+#### 工厂模式+策略模式+Map+自定义注解+枚举：
+
+在抽奖时需要进行判断，该用户是否是黑名单用户，该抽奖是否有权重规则，以及抽奖后用户积分是否达标，库存是否充分等等。。。
+1. 首先创建了一个ILogicFilter接口，该接口有一个方法Filter：接受一个规则物料实体对象，返回一个规则动作实体
+2. 其下有三个实现类都重写了Filter方法：
+ - RuleBlackListLogicFilter：黑名单过滤器，判断用户是否在黑名单中，如果在黑名单中则返回固定奖品
+ - RuleWeightLogicFilter：权重过滤器，判断抽奖是否有权重规则，如果有则进行规则内的奖品抽取
+ - RuleLockLogicFilter：积分过滤器，判断用户是否达标
+3. 有一个自定义注解LogicStrategy，其中包含着一个枚举，表示各个过滤器的类型，该注解可以标注在所有具体的过滤器上
+4. 还有一个规则工厂DefaultLogicFactory 其中的Map<String, ILogicFilter<?>> logicFilterMap用来存放所有被LogicStrategy注解的过滤器

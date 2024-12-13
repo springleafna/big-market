@@ -6,8 +6,8 @@ import com.springleaf.domain.strategy.model.entity.RaffleAwardEntity;
 import com.springleaf.domain.strategy.model.entity.RaffleFactorEntity;
 import com.springleaf.domain.strategy.service.IRaffleStrategy;
 import com.springleaf.domain.strategy.service.armory.IStrategyArmory;
-import com.springleaf.domain.strategy.service.rule.impl.RuleLockLogicFilter;
-import com.springleaf.domain.strategy.service.rule.impl.RuleWeightLogicFilter;
+import com.springleaf.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
+import com.springleaf.domain.strategy.service.rule.filter.impl.RuleLockLogicFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,9 +31,9 @@ public class RaffleStrategyTest {
     @Resource
     private IRaffleStrategy raffleStrategy;
     @Resource
-    private RuleWeightLogicFilter ruleWeightLogicFilter;
-    @Resource
     private RuleLockLogicFilter ruleLockLogicFilter;
+    @Resource
+    private RuleWeightLogicChain ruleWeightLogicChain;
 
     @Before
     public void setUp() {
@@ -44,7 +44,7 @@ public class RaffleStrategyTest {
 
         // 通过反射 mock 规则中的值
         // 分别为用户积分和用户抽奖次数
-        ReflectionTestUtils.setField(ruleWeightLogicFilter, "userScore", 40500L);
+        ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", 40500L);
         ReflectionTestUtils.setField(ruleLockLogicFilter, "userRaffleCount", 10L);
     }
 

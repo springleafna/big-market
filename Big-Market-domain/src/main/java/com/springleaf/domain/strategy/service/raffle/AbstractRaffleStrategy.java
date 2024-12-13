@@ -9,7 +9,7 @@ import com.springleaf.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import com.springleaf.domain.strategy.repository.IStrategyRepository;
 import com.springleaf.domain.strategy.service.IRaffleStrategy;
 import com.springleaf.domain.strategy.service.armory.IStrategyDispatch;
-import com.springleaf.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import com.springleaf.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import com.springleaf.types.enums.ResponseCode;
 import com.springleaf.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

@@ -1,12 +1,12 @@
-package com.springleaf.domain.strategy.service.rule.impl;
+package com.springleaf.domain.strategy.service.rule.filter.impl;
 
 import com.springleaf.domain.strategy.model.entity.RuleActionEntity;
 import com.springleaf.domain.strategy.model.entity.RuleMatterEntity;
 import com.springleaf.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import com.springleaf.domain.strategy.repository.IStrategyRepository;
 import com.springleaf.domain.strategy.service.annotation.LogicStrategy;
-import com.springleaf.domain.strategy.service.rule.ILogicFilter;
-import com.springleaf.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import com.springleaf.domain.strategy.service.rule.filter.ILogicFilter;
+import com.springleaf.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.springleaf.domain.strategy.service.rule;
+package com.springleaf.domain.strategy.service.rule.filter;
 
 import com.springleaf.domain.strategy.model.entity.RuleActionEntity;
 import com.springleaf.domain.strategy.model.entity.RuleMatterEntity;

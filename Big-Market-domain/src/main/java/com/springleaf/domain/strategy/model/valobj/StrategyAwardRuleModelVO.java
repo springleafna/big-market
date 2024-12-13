@@ -1,6 +1,6 @@
 package com.springleaf.domain.strategy.model.valobj;
 
-import com.springleaf.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import com.springleaf.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import com.springleaf.types.common.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
