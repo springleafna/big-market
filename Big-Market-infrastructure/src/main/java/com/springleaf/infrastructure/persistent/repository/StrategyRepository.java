@@ -3,6 +3,7 @@ package com.springleaf.infrastructure.persistent.repository;
 import com.springleaf.domain.strategy.model.entity.StrategyAwardEntity;
 import com.springleaf.domain.strategy.model.entity.StrategyEntity;
 import com.springleaf.domain.strategy.model.entity.StrategyRuleEntity;
+import com.springleaf.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import com.springleaf.domain.strategy.repository.IStrategyRepository;
 import com.springleaf.infrastructure.persistent.dao.IStrategyAwardDao;
 import com.springleaf.infrastructure.persistent.dao.IStrategyDao;
@@ -120,5 +121,14 @@ public class StrategyRepository implements IStrategyRepository {
         strategyRule.setAwardId(awardId);
         strategyRule.setRuleModel(ruleModel);
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
 }
