@@ -1,6 +1,5 @@
 package com.springleaf.domain.strategy.service.rule.tree;
 
-
 import com.springleaf.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 
 /**

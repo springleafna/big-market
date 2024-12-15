@@ -2,6 +2,7 @@ package com.springleaf.domain.strategy.service.armory;
 
 /**
  * 策略装配库，负责初始化策略计算
+ * 根据策略Id初始化策略存入Map集合，供后续抽奖时调用
  */
 public interface IStrategyArmory {
     /**

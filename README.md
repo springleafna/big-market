@@ -40,3 +40,4 @@
  - RuleLockLogicFilter：积分过滤器，判断用户是否达标
 3. 有一个自定义注解LogicStrategy，其中包含着一个枚举，表示各个过滤器的类型，该注解可以标注在所有具体的过滤器上
 4. 还有一个规则工厂DefaultLogicFactory 其中的Map<String, ILogicFilter<?>> logicFilterMap用来存放所有被LogicStrategy注解的过滤器
+
