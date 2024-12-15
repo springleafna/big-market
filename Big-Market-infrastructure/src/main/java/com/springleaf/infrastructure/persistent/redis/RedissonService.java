@@ -154,5 +154,26 @@ public class RedissonService implements IRedisService {
         return redissonClient.getBloomFilter(key);
     }
 
+    /**
+     * 这个 setNx 方法主要用于在 Redis 中实现“锁”的功能。
+     * 方法尝试将字符串“lock”设置到指定的 Redis 键上，只有在该键未被设置（即为空）时，才会成功。
+     * 如果成功设置返回 true，否则返回 false。
+     * 该方法通常用于分布式锁的实现，确保某个操作不会被多个线程或进程同时执行。
+     */
+    @Override
+    public Boolean setNx(String key) {
+        return redissonClient.getBucket(key).trySet("lock");
+    }
+
+    /**
+     * 将一个给定的长整型值（long value）设置到 Redis 的原子长整型变量中
+     * @param key   key 键
+     * @param value 值
+     */
+    @Override
+    public void setAtomicLong(String key, long value) {
+        redissonClient.getAtomicLong(key).set(value);
+    }
+
 
 }
