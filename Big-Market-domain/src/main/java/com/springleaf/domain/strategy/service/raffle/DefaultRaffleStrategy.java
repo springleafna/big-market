@@ -1,10 +1,13 @@
 package com.springleaf.domain.strategy.service.raffle;
 
+import com.springleaf.domain.strategy.model.entity.StrategyAwardEntity;
 import com.springleaf.domain.strategy.model.valobj.RuleTreeVO;
 import com.springleaf.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import com.springleaf.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import com.springleaf.domain.strategy.repository.IStrategyRepository;
 import com.springleaf.domain.strategy.service.AbstractRaffleStrategy;
+import com.springleaf.domain.strategy.service.IRaffleAward;
+import com.springleaf.domain.strategy.service.IRaffleStock;
 import com.springleaf.domain.strategy.service.armory.IStrategyDispatch;
 import com.springleaf.domain.strategy.service.rule.chain.ILogicChain;
 import com.springleaf.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
@@ -13,12 +16,14 @@ import com.springleaf.domain.strategy.service.rule.tree.factory.engine.IDecision
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * 默认的抽奖策略实现
  */
 @Slf4j
 @Service
-public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
+public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRaffleAward, IRaffleStock {
 
     public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch, DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory) {
         super(repository, strategyDispatch, defaultChainFactory, defaultTreeFactory);
@@ -52,5 +57,10 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
     @Override
     public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
         repository.updateStrategyAwardStock(strategyId, awardId);
+    }
+
+    @Override
+    public List<StrategyAwardEntity> queryRaffleStrategyAwardList(Long strategyId) {
+        return repository.queryStrategyAwardList(strategyId);
     }
 }

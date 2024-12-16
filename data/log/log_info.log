@@ -1,12 +1,114 @@
-24-12-09.12:57:58.456 [main            ] INFO  Application            - Starting Application using Java 1.8.0_362 on spring with PID 24376 (D:\javatools\IDEAtool\javaproject\Big-Market\Big-Market-app\target\classes started by 86167 in D:\javatools\IDEAtool\javaproject\Big-Market)
-24-12-09.12:57:58.459 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-24-12-09.12:57:59.017 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.springleaf]' package. Please check your configuration.
-24-12-09.12:57:59.380 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-24-12-09.12:57:59.394 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-24-12-09.12:57:59.395 [main            ] INFO  StandardService        - Starting service [Tomcat]
-24-12-09.12:57:59.395 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-24-12-09.12:57:59.567 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-24-12-09.12:57:59.567 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1071 ms
-24-12-09.12:58:00.087 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-24-12-09.12:58:00.182 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-24-12-09.12:58:00.190 [main            ] INFO  Application            - Started Application in 2.195 seconds (JVM running for 3.879)
+24-12-16.17:23:13.070 [main            ] INFO  Application            - Starting Application using Java 1.8.0_362 on spring with PID 22124 (D:\javatools\IDEAtool\javaproject\Big-Market\Big-Market-app\target\classes started by 86167 in D:\javatools\IDEAtool\javaproject\Big-Market)
+24-12-16.17:23:13.074 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-12-16.17:23:14.227 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-12-16.17:23:14.230 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-12-16.17:23:14.296 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 0 Redis repository interfaces.
+24-12-16.17:23:15.035 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-12-16.17:23:15.044 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-12-16.17:23:15.044 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-12-16.17:23:15.044 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-12-16.17:23:15.269 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-12-16.17:23:15.269 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2139 ms
+24-12-16.17:23:15.996 [main            ] INFO  Version                - Redisson 3.23.4
+24-12-16.17:23:17.029 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-12-16.17:23:17.044 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-12-16.17:23:18.019 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-12-16.17:23:18.065 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-12-16.17:23:18.083 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-12-16.17:23:18.106 [main            ] INFO  Application            - Started Application in 5.619 seconds (JVM running for 7.462)
+24-12-16.17:23:20.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:23:25.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:23:30.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:23:35.010 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:23:40.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:23:45.006 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:23:49.400 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-12-16.17:23:49.400 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-12-16.17:23:49.404 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 3 ms
+24-12-16.17:23:50.011 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:23:55.011 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:00.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:05.004 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:10.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:15.017 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:20.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:25.009 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:30.010 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:35.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:40.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:43.760 [http-nio-8091-exec-3] INFO  RaffleController       - 抽奖策略装配开始 strategyId：100006
+24-12-16.17:24:43.788 [http-nio-8091-exec-3] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-12-16.17:24:44.354 [http-nio-8091-exec-3] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-12-16.17:24:44.658 [http-nio-8091-exec-3] INFO  RaffleController       - 抽奖策略装配完成 strategyId：100006 response: {"code":"0000","data":true,"info":"成功"}
+24-12-16.17:24:45.009 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:50.017 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:24:55.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:00.009 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:05.009 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:10.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:15.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:20.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:25.010 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:30.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:32.816 [http-nio-8091-exec-7] INFO  RaffleController       - 查询抽奖奖品列表配开始 strategyId：100006
+24-12-16.17:25:32.838 [http-nio-8091-exec-7] INFO  RaffleController       - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","sort":1},{"awardId":102,"awardTitle":"7等奖","sort":2},{"awardId":103,"awardTitle":"6等奖","sort":3},{"awardId":104,"awardTitle":"5等奖","sort":4},{"awardId":105,"awardTitle":"4等奖","sort":5},{"awardId":106,"awardSubtitle":"抽奖1次后解锁","awardTitle":"3等奖","sort":6},{"awardId":107,"awardSubtitle":"抽奖1次后解锁","awardTitle":"2等奖","sort":7},{"awardId":108,"awardSubtitle":"抽奖2次后解锁","awardTitle":"1等奖","sort":8}],"info":"成功"}
+24-12-16.17:25:35.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:40.017 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:45.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:50.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:55.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:25:55.431 [http-nio-8091-exec-9] INFO  RaffleController       - 随机抽奖开始 strategyId: 100006
+24-12-16.17:25:55.440 [http-nio-8091-exec-9] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: system strategyId: 100006 ruleModel: rule_default awardId: 105
+24-12-16.17:25:55.441 [http-nio-8091-exec-9] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 system 100006 105 rule_default
+24-12-16.17:25:55.485 [http-nio-8091-exec-9] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:system strategyId:100006 awardId:105
+24-12-16.17:25:55.488 [http-nio-8091-exec-9] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:system strategyId:100006 awardId:105
+24-12-16.17:25:55.519 [http-nio-8091-exec-9] INFO  DecisionTreeEngine     - 决策树引擎【规则树-兜底奖励】treeId:tree_luck_award node:rule_stock code:0001
+24-12-16.17:25:55.520 [http-nio-8091-exec-9] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 system 100006 105 null
+24-12-16.17:25:55.530 [http-nio-8091-exec-9] INFO  RaffleController       - 随机抽奖完成 strategyId: 100006 response: {"code":"0000","data":{"awardId":105,"awardIndex":5},"info":"成功"}
+24-12-16.17:26:00.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:26:00.010 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:105
+24-12-16.17:26:05.010 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:26:07.528 [http-nio-8091-exec-5] INFO  RaffleController       - 随机抽奖开始 strategyId: 100006
+24-12-16.17:26:07.533 [http-nio-8091-exec-5] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: system strategyId: 100006 ruleModel: rule_default awardId: 105
+24-12-16.17:26:07.533 [http-nio-8091-exec-5] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 system 100006 105 rule_default
+24-12-16.17:26:07.548 [http-nio-8091-exec-5] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:system strategyId:100006 awardId:105
+24-12-16.17:26:07.550 [http-nio-8091-exec-5] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:system strategyId:100006 awardId:105
+24-12-16.17:26:07.551 [http-nio-8091-exec-5] INFO  DecisionTreeEngine     - 决策树引擎【规则树-兜底奖励】treeId:tree_luck_award node:rule_stock code:0001
+24-12-16.17:26:07.551 [http-nio-8091-exec-5] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 system 100006 105 null
+24-12-16.17:26:07.552 [http-nio-8091-exec-5] INFO  RaffleController       - 随机抽奖完成 strategyId: 100006 response: {"code":"0000","data":{"awardId":105,"awardIndex":5},"info":"成功"}
+24-12-16.17:26:10.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:26:15.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:26:15.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:105
+24-12-16.17:26:19.734 [http-nio-8091-exec-11] INFO  RaffleController       - 随机抽奖开始 strategyId: 100006
+24-12-16.17:26:19.737 [http-nio-8091-exec-11] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: system strategyId: 100006 ruleModel: rule_default awardId: 105
+24-12-16.17:26:19.737 [http-nio-8091-exec-11] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 system 100006 105 rule_default
+24-12-16.17:26:19.742 [http-nio-8091-exec-11] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:system strategyId:100006 awardId:105
+24-12-16.17:26:19.743 [http-nio-8091-exec-11] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:system strategyId:100006 awardId:105
+24-12-16.17:26:19.745 [http-nio-8091-exec-11] INFO  DecisionTreeEngine     - 决策树引擎【规则树-兜底奖励】treeId:tree_luck_award node:rule_stock code:0001
+24-12-16.17:26:19.745 [http-nio-8091-exec-11] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 system 100006 105 null
+24-12-16.17:26:19.746 [http-nio-8091-exec-11] INFO  RaffleController       - 随机抽奖完成 strategyId: 100006 response: {"code":"0000","data":{"awardId":105,"awardIndex":5},"info":"成功"}
+24-12-16.17:26:20.003 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:26:22.797 [http-nio-8091-exec-13] INFO  RaffleController       - 随机抽奖开始 strategyId: 100006
+24-12-16.17:26:22.800 [http-nio-8091-exec-13] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: system strategyId: 100006 ruleModel: rule_default awardId: 105
+24-12-16.17:26:22.800 [http-nio-8091-exec-13] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 system 100006 105 rule_default
+24-12-16.17:26:22.803 [http-nio-8091-exec-13] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:system strategyId:100006 awardId:105
+24-12-16.17:26:22.804 [http-nio-8091-exec-13] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:system strategyId:100006 awardId:105
+24-12-16.17:26:22.805 [http-nio-8091-exec-13] INFO  DecisionTreeEngine     - 决策树引擎【规则树-兜底奖励】treeId:tree_luck_award node:rule_stock code:0001
+24-12-16.17:26:22.805 [http-nio-8091-exec-13] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 system 100006 105 null
+24-12-16.17:26:22.806 [http-nio-8091-exec-13] INFO  RaffleController       - 随机抽奖完成 strategyId: 100006 response: {"code":"0000","data":{"awardId":105,"awardIndex":5},"info":"成功"}
+24-12-16.17:26:25.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:26:25.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:105
+24-12-16.17:26:26.751 [http-nio-8091-exec-15] INFO  RaffleController       - 随机抽奖开始 strategyId: 100006
+24-12-16.17:26:26.755 [http-nio-8091-exec-15] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: system strategyId: 100006 ruleModel: rule_default awardId: 106
+24-12-16.17:26:26.755 [http-nio-8091-exec-15] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 system 100006 106 rule_default
+24-12-16.17:26:26.764 [http-nio-8091-exec-15] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:system strategyId:100006 awardId:106
+24-12-16.17:26:26.764 [http-nio-8091-exec-15] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock_1 node:rule_lock code:0000
+24-12-16.17:26:26.764 [http-nio-8091-exec-15] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:system strategyId:100006 awardId:106
+24-12-16.17:26:26.765 [http-nio-8091-exec-15] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:system strategyId:100006 awardId:106
+24-12-16.17:26:26.766 [http-nio-8091-exec-15] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock_1 node:rule_stock code:0001
+24-12-16.17:26:26.767 [http-nio-8091-exec-15] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 system 100006 106 null
+24-12-16.17:26:26.771 [http-nio-8091-exec-15] INFO  RaffleController       - 随机抽奖完成 strategyId: 100006 response: {"code":"0000","data":{"awardId":106,"awardIndex":6},"info":"成功"}
+24-12-16.17:26:30.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-12-16.17:26:30.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存 strategyId:100006 awardId:105
+24-12-16.17:26:31.651 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-12-16.17:26:31.667 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
