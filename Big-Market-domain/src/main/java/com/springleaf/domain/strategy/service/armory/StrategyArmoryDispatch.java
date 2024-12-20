@@ -28,9 +28,17 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     @Override
     public boolean assembleLotteryStrategy(Long strategyId) {
         // 1. 查询策略配置
+        /*
+        * 根据策略Id在策略奖品表中查询该策略下对应的所有奖品信息
+        * 并且存入缓存，key为big_market_strategy_award_list_key_+策略Id，value为奖品列表
+        */
         List<StrategyAwardEntity> strategyAwardEntities = repository.queryStrategyAwardList(strategyId);
 
         // 2 缓存奖品库存【用于decr扣减库存使用】
+        /*
+        * 将奖品库存存入缓存
+        * key为strategy_award_count_key_+strategyId+awardId，value为奖品库存数量
+        * */
         for (StrategyAwardEntity strategyAward : strategyAwardEntities) {
             Integer awardId = strategyAward.getAwardId();
             Integer awardCount = strategyAward.getAwardCount();
@@ -38,6 +46,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
         }
 
         // 3.1 默认装配配置【全量抽奖概率】
+        // 首先不考虑权重策略配置 将所有奖品存入缓存
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
 
         // 3.2. 权重策略配置 - 适用于 rule_weight 权重规则配置
@@ -56,6 +65,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
             List<Integer> ruleWeightValues = ruleWeightValueMap.get(key);
             ArrayList<StrategyAwardEntity> strategyAwardEntitiesClone = new ArrayList<>(strategyAwardEntities);
             strategyAwardEntitiesClone.removeIf(entity -> !ruleWeightValues.contains(entity.getAwardId()));
+            // 这次装配的奖品列表，只包含符合当前权重规则的奖品
             assembleLotteryStrategy(String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(key), strategyAwardEntitiesClone);
         }
 
