@@ -1,4 +1,4 @@
-package com.springleaf.test.domain;
+package com.springleaf.test.domain.strategy;
 
 import com.springleaf.domain.strategy.service.armory.IStrategyArmory;
 import com.springleaf.domain.strategy.service.armory.IStrategyDispatch;

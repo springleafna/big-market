@@ -1,4 +1,4 @@
-package com.springleaf.test.domain;
+package com.springleaf.test.domain.strategy;
 
 
 import com.alibaba.fastjson2.JSON;
