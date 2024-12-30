@@ -3,6 +3,8 @@ package com.springleaf.domain.activity.service.armory;
 import com.springleaf.domain.activity.model.entity.ActivitySkuEntity;
 import com.springleaf.domain.activity.repository.IActivityRepository;
 import com.springleaf.types.common.Constants;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -10,6 +12,8 @@ import java.util.Date;
 /**
  * 活动sku预热
  */
+@Slf4j
+@Service
 public class ActivityArmory implements IActivityArmory, IActivityDispatch{
 
     @Resource

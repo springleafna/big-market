@@ -1,4 +1,4 @@
-package com.springleaf.domain.activity.service.rule;
+package com.springleaf.domain.activity.service;
 
 
 import com.springleaf.domain.activity.model.valobj.ActivitySkuStockKeyVO;
@@ -6,7 +6,7 @@ import com.springleaf.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 /**
  * 活动sku库存处理接口
  */
-public interface ISkuStock {
+public interface IRaffleActivitySkuStockService {
 
     /**
      * 获取活动sku库存消耗队列

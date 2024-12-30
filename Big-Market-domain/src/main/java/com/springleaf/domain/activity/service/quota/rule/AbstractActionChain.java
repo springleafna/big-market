@@ -1,4 +1,4 @@
-package com.springleaf.domain.activity.service.rule;
+package com.springleaf.domain.activity.service.quota.rule;
 
 /**
  * 下单规则责任链抽象类

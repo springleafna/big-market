@@ -1,4 +1,4 @@
-package com.springleaf.domain.activity.service.rule;
+package com.springleaf.domain.activity.service.quota.rule;
 
 
 import com.springleaf.domain.activity.model.entity.ActivityCountEntity;
