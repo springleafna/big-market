@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /**
- * 基础时间
+ * 基础事件
  */
 @Data
 public abstract class BaseEvent<T> {
