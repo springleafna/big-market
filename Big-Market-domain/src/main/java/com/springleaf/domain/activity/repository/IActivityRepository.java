@@ -6,6 +6,7 @@ import com.springleaf.domain.activity.model.entity.*;
 import com.springleaf.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 活动仓储接口
@@ -43,4 +44,6 @@ public interface IActivityRepository {
     ActivityAccountDayEntity queryActivityAccountDayByUserId(String userId, Long activityId, String day);
 
     void saveCreatePartakeOrderAggregate(CreatePartakeOrderAggregate createPartakeOrderAggregate);
+
+    List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId);
 }

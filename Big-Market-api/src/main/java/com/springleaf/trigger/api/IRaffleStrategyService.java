@@ -2,8 +2,8 @@ package com.springleaf.trigger.api;
 
 import com.springleaf.trigger.api.dto.RaffleAwardListRequestDTO;
 import com.springleaf.trigger.api.dto.RaffleAwardListResponseDTO;
-import com.springleaf.trigger.api.dto.RaffleRequestDTO;
-import com.springleaf.trigger.api.dto.RaffleResponseDTO;
+import com.springleaf.trigger.api.dto.RaffleStrategyRequestDTO;
+import com.springleaf.trigger.api.dto.RaffleStrategyResponseDTO;
 import com.springleaf.types.model.Response;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 抽奖服务接口
  */
-public interface IRaffleService {
+public interface IRaffleStrategyService {
     /**
      * 策略装配接口
      * @param strategyId 策略Id
@@ -33,5 +33,5 @@ public interface IRaffleService {
      * @param requestDTO 请求参数
      * @return 抽奖结果
      */
-    Response<RaffleResponseDTO> randomRaffle(RaffleRequestDTO requestDTO);
+    Response<RaffleStrategyResponseDTO> randomRaffle(RaffleStrategyRequestDTO requestDTO);
 }
