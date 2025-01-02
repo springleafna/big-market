@@ -110,3 +110,24 @@ raffle_activity_day:记录某用户在某活动下的每日抽奖次数以及剩
 raffle_activity_month:记录某用户在某活动下的每月抽奖次数以及剩余次数   
 所有用户参与活动之后三张表的记录都会更新且是在同一个事务中进行的。    
 
+
+## 策略装配
+活动预热：传入活动Id
+根据活动Id获取所有的sku  
+将sku的剩余库存写入缓存 ：activity_sku_stock_count_key_+sku  
+再将该sku的活动次数写入到缓存 ：big_market_activity_count_key_+activityCountId  
+再将活动写入缓存 ：big_market_activity_key_+activityId  
+
+
+策略预热：传入活动Id
+根据活动Id获取对应的策略Id  
+根据策略Id获取该策略下的所有奖品并写入缓存：big_market_strategy_award_list_key_+ strategyId  
+再缓存所有奖品的库存：strategy_award_count_key_+ strategyId + _ + awardId  
+然后不考虑权重策略配置 将所有奖品的概率范围（Map集合的长度）写入缓存：big_market_strategy_rate_range_key_+strategyId  
+再将这个Map集合（key:随机数，value:奖品Id）写入缓存：big_market_strategy_rate_table_key_ + strategyId
+再考虑是否存在权重策略，装配权重  
+将当前策略写入缓存：big_market_strategy_key_ + strategyId   
+
+
+## 执行抽奖
+传入活动Id和用户Id（用户参加某个抽奖活动，该活动有对应的抽奖策略，根据策略进行抽奖） 
