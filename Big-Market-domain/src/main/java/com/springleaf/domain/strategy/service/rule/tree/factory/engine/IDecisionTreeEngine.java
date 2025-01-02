@@ -2,6 +2,8 @@ package com.springleaf.domain.strategy.service.rule.tree.factory.engine;
 
 import com.springleaf.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 
+import java.util.Date;
+
 /**
  * 规则树组合接口：用于组合多个规则树，形成一个大的规则树
  * 工厂外添加引擎:
@@ -9,5 +11,5 @@ import com.springleaf.domain.strategy.service.rule.tree.factory.DefaultTreeFacto
  * 如果处理逻辑需要根据不同的情况而变化，那么可以通过创建不同引擎来实现，而不需要修改工厂的代码
  */
 public interface IDecisionTreeEngine {
-    DefaultTreeFactory.StrategyAwardVO process(String userId, Long strategyId, Integer awardId);
+    DefaultTreeFactory.StrategyAwardVO process(String userId, Long strategyId, Integer awardId, Date endDateTime);
 }
